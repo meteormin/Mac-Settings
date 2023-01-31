@@ -167,30 +167,63 @@ prompt_newline() {
 
 ## 5. Alfred 4
 
+spolight 대체 애플리케이션
+
 ```zsh
 brew install --cask alfred
 ```
 
 ## 6. Docker Desktop
 
+docker desktop
+
 ```zsh
 brew install --cask docker
 ```
 
 ## 7. Docker compose 
+
+docker compose
+
 ```zsh
 brew install docker-compose
 ```
 
 ## 8. run cat
 
-## 9. jetbrains toolbox
+### show system information
+The cat tells you the CPU usage of Mac by running speed.
 
-## 10. unicorn https
+https://apps.apple.com/us/app/runcat/id1429033973?mt=12
 
-## 11. amphetamine
+
+## 9. Jetbrains toolbox
+
+IDE
+
+https://www.jetbrains.com/toolbox-app/
+
+
+## 10. Unicorn https
+
+Bypassing SNI HTTPS Filtering
+
+https://apps.apple.com/kr/app/unicorn-https/id1475628500?mt=12
+
+## 11. Amphetamine
+
+잠자기 방지
+
+https://apps.apple.com/kr/app/amphetamine/id937984704?mt=12
 
 ## 12. AlDente
 
+배터리 충전 관리
+
+https://github.com/davidwernhart/AlDente-Charge-Limiter
+
 ## 13. Maccy
 
+클립보드 관리
+
+https://github.com/p0deje/Maccy

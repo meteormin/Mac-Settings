@@ -227,3 +227,19 @@ https://github.com/davidwernhart/AlDente-Charge-Limiter
 클립보드 관리
 
 https://github.com/p0deje/Maccy
+
+## 14. keka
+
+압축 프로그램
+
+https://www.keka.io/en/
+
+## 15. AppCleaner
+
+앱 삭제 프로그램
+
+https://freemacsoft.net/appcleaner/
+
+## 16. MS Office
+
+App store

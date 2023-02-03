@@ -251,4 +251,8 @@ ssh management, remote terminal
 https://termius.com/
 
 
+## 18. Recentagle
 
+화면 분할 프로그램
+
+https://rectangleapp.com/

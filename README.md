@@ -243,3 +243,12 @@ https://freemacsoft.net/appcleaner/
 ## 16. MS Office
 
 App store
+
+## 17. Terminus
+
+ssh management, remote terminal
+
+https://termius.com/
+
+
+

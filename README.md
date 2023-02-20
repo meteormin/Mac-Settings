@@ -165,7 +165,7 @@ prompt_newline() {
 
 
 
-## 5. Alfred 4
+## 5. Alfred 5
 
 spolight 대체 애플리케이션
 

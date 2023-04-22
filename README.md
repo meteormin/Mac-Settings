@@ -134,8 +134,7 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 export EDITOR=/usr/bin/vim
-
-
+neofetch # if you install neofetch
 
 # install D2coding font
 https://github.com/naver/d2codingfont

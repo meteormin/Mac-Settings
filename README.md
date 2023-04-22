@@ -77,22 +77,26 @@
 
 ### Packages
 
-- nvm
-- openjdk
-- autojump
-- pyenv
-- pyenv-virtualenv
-- python@{version}
-- go
+- nvm: 노드 버전 관리 도구
+- openjdk: 자바 오픈소스
+- autojump: 경로 이동(cd 명령어) 편의성 증가
+  - Basic: cd /users/myusername
+  - use AutoJump: j myusername 
+- pyenv: python 버전 관리 도구
+- pyenv-virtualenv: python 가상 환경 구성 
+- python@{version}: homebrew python 설치
+- go: golang
 - zsh
     - zsh-autosuggestions
     - zsh-syntax-highlighting
+- gotop: 기존 top 명령을 좀 더 비주얼틱하게 
+- neofetch: https://github.com/dylanaraps/neofetch
 
 Casks
-- maccy
-- slack
-- vscode
-- iterms2
+- maccy: 클립보드 유틸리티
+- slack: 슬랙
+- vscode: vscode
+- iterms2: 터미널 프로그램
 
 ## 4. iTerms2
 

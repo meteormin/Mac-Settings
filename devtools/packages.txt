@@ -1,0 +1,10 @@
+gnupg
+git-secret
+make
+zip
+unzip
+bat
+jq
+tmux
+tree
+fastfetch

@@ -7,4 +7,8 @@ bat
 jq
 tmux
 tree
+fd
+ripgrep
+gotop
+fzf
 fastfetch

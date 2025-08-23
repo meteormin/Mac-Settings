@@ -1,261 +1,86 @@
 # Mac Settings
 
-## 목차
+## Table of Contents
+
+- [Summary](#summary)
+- [MacOS Setting](#macos-setting)
+- [Packages](#packages)
+- [Terminal](#terminal)
+
+## Summary
+
+사용하던 Mac OS 기기를 변경할 경우 사용 필요한 패키지들을 빠르게 설치하기 위한
 
 
-## 1. 개요
-
-사용하던 Mac OS 기기를 변경할 경우, Apple 계정과 iCloud를 통해 왠만한 설정들은 옮겨갈 수 있지만 저와 같은 개발자는 업무를 위해 새로운 계정을 생성하거나 iCloud로 옮기기 어려운 설정이나 프로그램들이 존재할 수 있다.
-위와 같은 이유로 주로 사용하는 필수적인 Mac 설정이나 프로그램들을 정리하고자 하였다.
-
-
-## 2. Mac OS 설정
-> 별도의 프로그램 없이 설정 가능한 OS 설정, 해당 설정은 거의 모든 설정을 icloud를 통해 옮길 수 있을 것 으로 보인다.
-
- 
-1. 시스템 설정 접근하기
-
-![system_settgins](./images/os_setting_1.png)
-
-- 애플로고 클릭 > System Settings 클릭
-
-2. Desktop & Dock tab
-![Desktop & Dock tab](./images/os_setting_desktop_and_dock.png)
-- Dock
-    - Dock Size 및 Magnification은 취향에 맞게 조절
-        - 화면 크기에 따라 설정이 다름
-
-    - Minimize windows using: Scale Effect
-    - Minimize windows into application icon: True
-    - Automactically hide and show the Dock: True
-    - Animate opening applications: True
-    - Show recent application in Dock: False
-
-- Menu Bar
-    - Automatically hide and show the menu bar: Always
-    - Recent documents, applications, and servers: 10
-
-- Windows & Apps
-    - Prefer tabs when opening documents: In Full Screen
-    - Ask to keep changes when closing documents: False
-    - Close windows when quiting an application: True
-    - Stage Manager: False
-    - Default web browser: Google Chrome
-- Mission Control
-    - Automatically rearrange Spaces based on most recent use: False
-    - When switching to an application, switch to a Space with open windows for the application: True
-    - Group windows by application: True
-    - Display have separate Spaces: True
-- Hot Conners
-    - top-left: -
-    - top-right: Notification Center
-    - bottom-left: Launchpad
-    - bottom-right: Quick Noe
-
-3. Battery
-- Wake for network access: Only on Power Adapter
-
-- Optimize video streaming while on battery
-
-4. Lock Screen
-- Start Screen Saver When inactive" Never
-- Turn display off on battery when inactive: For 10 minutes
-- Turn dispay off on Power adapter when inactive: Never
-- Require password after screen saver begins or display it turned off: After 5 minutes
-- Show message when locked: False
-
-5. Accessibility
-- Trackpad Options > Dragging style: Three Finger Drag
-
-
-
-
-
-## 3. Home Brew
-
-1. Install: https://brew.sh/index_ko
+## MacOS Setting
+> 별도의 프로그램 없이 설정 가능한 OS 설정, 해당 설정들은 icloud를 통해 옮길 수 있을 것 같습니다.
 
 ### Packages
+> [My Homebrew Packages](./devtools/packages.txt)
 
-- nvm: 노드 버전 관리 도구
-- openjdk: 자바 오픈소스
-- autojump: 경로 이동(cd 명령어) 편의성 증가
-  - Basic: cd /users/myusername
-  - use AutoJump: j myusername 
-- pyenv: python 버전 관리 도구
-- pyenv-virtualenv: python 가상 환경 구성 
-- python@{version}: homebrew python 설치
-- go: golang
-- zsh
-    - zsh-autosuggestions
-    - zsh-syntax-highlighting
-- gotop: 기존 top 명령을 좀 더 비주얼틱하게 
-- neofetch: https://github.com/dylanaraps/neofetch
+```zsh
+cd ./devtools
+./install.sh # install brew & packages 
+```
 
-Casks
-- maccy: 클립보드 유틸리티
-- slack: 슬랙
-- vscode: vscode
-- iterms2: 터미널 프로그램
+### Terminal
 
-## 4. iTerms2
-
-```bash
-brew install --cask iterms2 
-
-cd ~
-
+#### Oh My Zsh
+> [Oh My Zsh](https://ohmyz.sh/)
+```zsh
 # install oh-my-zsh
-sh -c “$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)”
-
-# install oceanic material
-https://iterm2colorschemes.com/
-
-curl -O https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/MaterialOcean.itermcolors
-
-vim .zshrc
-
-ZSH_THEME="agnoster"
-
-# plugins
-# autojump: brew install autojump
-# zsh-autosuggestions: brew install zsh-autosuggestions
-# zsh-syntax-highlighting: brew install zsh-syntax-highlighting
-
-plugins=(
-  autojump
-  zsh-autosuggestions
-  zsh-syntax-highlighting
-)
-
-[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
-
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-export EDITOR=/usr/bin/vim
-neofetch # if you install neofetch
-
-# install D2coding font
-https://github.com/naver/d2codingfont
-
-# setting new line 
-~/.oh-my-zsh/themes/agnoster.zsh-theme
-
-PROMPT='%{%f%b%k%}$(build_prompt) '
-
-# modify function
-prompt_context() { 
-    if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then 
-        prompt_segment black default "%(!.%{%F{yellow}%}.)$USER" 
-    fi 
-}
-
-# add function
-prompt_newline() {
-  if [[ -n $CURRENT_BG ]]; then
-    echo -n "%{%k%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR
-%{%k%F{blue}%}$SEGMENT_SEPARATOR"
-  else
-    echo -n "%{%k%}"
-  fi
-
-  echo -n "%{%f%}"
-  CURRENT_BG=''
-}
-
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
-
-
-
-## 5. Alfred 5
-
-spolight 대체 애플리케이션
+#### Powerlevel10k
+> [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
+> [Nerd Font](https://www.nerdfonts.com/font-downloads): 일부 특수 문자들 때문에 nerd font를 사용해야 합니다.
+>> * 한글 폰트에 친화적인 `D2CodingLigature Nerd Font`를 추천합니다.
 
 ```zsh
-brew install --cask alfred
+# install powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/Powerlevel10k
 ```
-
-## 6. Docker Desktop
-
-docker desktop
+#### Plugins
+- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 
 ```zsh
-brew install --cask docker
+brew install zsh-autosuggestions
+
+# .zshrc
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 ```
 
-## 7. Docker compose 
-
-docker compose
+- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 
 ```zsh
-brew install docker-compose
+brew install zsh-syntax-highlighting
+
+# .zshrc
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ```
 
-## 8. run cat
+### Development
 
-### show system information
-The cat tells you the CPU usage of Mac by running speed.
+#### NVM (Node Version Manager)
+> [nvm](https://github.com/nvm-sh/nvm)
 
-https://apps.apple.com/us/app/runcat/id1429033973?mt=12
+```zsh
+brew install nvm 
 
+# .zshrc
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+```
 
-## 9. Jetbrains toolbox
+#### Pyenv (Python Version Manager)
+> [pyenv](https://github.com/pyenv/pyenv)
 
-IDE
+```zsh
+brew install pyenv
 
-https://www.jetbrains.com/toolbox-app/
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
+echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
+echo 'eval "$(pyenv init - zsh)"' >> ~/.zshrc
 
-
-## 10. Unicorn https
-
-Bypassing SNI HTTPS Filtering
-
-https://apps.apple.com/kr/app/unicorn-https/id1475628500?mt=12
-
-## 11. Amphetamine
-
-잠자기 방지
-
-https://apps.apple.com/kr/app/amphetamine/id937984704?mt=12
-
-## 12. AlDente
-
-배터리 충전 관리
-
-https://github.com/davidwernhart/AlDente-Charge-Limiter
-
-## 13. Maccy
-
-클립보드 관리
-
-https://github.com/p0deje/Maccy
-
-## 14. keka
-
-압축 프로그램
-
-https://www.keka.io/en/
-
-## 15. AppCleaner
-
-앱 삭제 프로그램
-
-https://freemacsoft.net/appcleaner/
-
-## 16. MS Office
-
-App store
-
-## 17. Terminus
-
-ssh management, remote terminal
-
-https://termius.com/
-
-
-## 18. Recentagle
-
-화면 분할 프로그램
-
-https://rectangleapp.com/
+```

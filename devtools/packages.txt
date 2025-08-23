@@ -1,3 +1,6 @@
+# My Homebrew Packages
+
+[formulae]
 gnupg
 git-secret
 make
@@ -12,3 +15,16 @@ ripgrep
 gotop
 fzf
 fastfetch
+autojump
+
+[cask]
+iterm2
+docker
+visual-studio-code
+obsidian
+arc
+firefox
+maccy
+keka
+pearcleaner
+rectangle

@@ -16,6 +16,13 @@ gotop
 fzf
 fastfetch
 autojump
+yazi
+ffmpeg
+poppler
+zoxide
+resvg
+imagemagick
+font-symbols-only-nerd-font
 
 [cask]
 iterm2

@@ -1,4 +1,4 @@
-#!/bin/env zsh
+#!/usr/bin/env zsh
 
 # Check for Homebrew
 if ! command -v brew &> /dev/null; then

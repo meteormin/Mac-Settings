@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env zsh
 
 PACKAGE_FILE="$1"
 CURRENT_SECTION=""

@@ -13,7 +13,7 @@
 
 
 ## MacOS Setting
-> 별도의 프로그램 없이 설정 가능한 OS 설정, 해당 설정들은 icloud를 통해 옮길 수 있을 것 같습니다.
+> 별도의 프로그램 없이 설정 가능한 OS 설정, 해당 설정들은 icloud를 통해 옮길 수 있으므로 생략
 
 ### Packages
 > [My Homebrew Packages](./devtools/packages.txt)

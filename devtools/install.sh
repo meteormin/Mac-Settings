@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env zsh
 
 PACKAGES="packages.txt"
 
